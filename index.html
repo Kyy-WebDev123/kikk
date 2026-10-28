@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanoh Rencong — Aceh Beranda Nusantara</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="brand"><b>Tanoh</b> Rencong</div>
+    <div class="navlinks">
+      <a href="#sejarah">Sejarah</a>
+      <a href="#suku">Suku &amp; Ras</a>
+      <a href="#pakaian">Pakaian</a>
+      <a href="#makanan">Makanan</a>
+      <a href="#seni">Seni</a>
+      <a href="#kelompok">Kelompok</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+
+    <div class="hero-moon" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <defs>
+          <radialGradient id="moonHalo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#e6c877" stop-opacity="0.32"/>
+            <stop offset="55%" stop-color="#c79a45" stop-opacity="0.10"/>
+            <stop offset="100%" stop-color="#c79a45" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="moonFill" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff2c2"/>
+            <stop offset="55%" stop-color="#e6c877"/>
+            <stop offset="100%" stop-color="#c79a45"/>
+          </linearGradient>
+          <mask id="moonCut">
+            <rect width="200" height="200" fill="#fff"/>
+            <circle cx="118" cy="92" r="52" fill="#000"/>
+          </mask>
+        </defs>
+
+        <circle class="moon-halo" cx="100" cy="100" r="98" fill="url(#moonHalo)"/>
+
+        <g transform="rotate(-18 100 100)">
+          <circle cx="88" cy="100" r="60" fill="url(#moonFill)" mask="url(#moonCut)"/>
+          <g transform="translate(124 96)">
+            <polygon class="moon-star" fill="#e6c877"
+              points="0,-14 3.29,-4.53 13.31,-4.33 5.33,1.73 8.23,11.33 0,5.6 -8.23,11.33 -5.33,1.73 -13.31,-4.33 -3.29,-4.53"/>
+          </g>
+        </g>
+
+        <g class="sparkles" fill="#fff2c2">
+          <circle cx="24" cy="36" r="1.8"/>
+          <circle cx="176" cy="28" r="1.4"/>
+          <circle cx="188" cy="118" r="2"/>
+          <circle cx="158" cy="174" r="1.5"/>
+          <circle cx="44" cy="170" r="1.7"/>
+          <circle cx="12" cy="108" r="1.3"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-glow" aria-hidden="true"></div>
+    <canvas class="hero-particles" aria-hidden="true"></canvas>
+
+    <svg class="hero-silhouette" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,260 L0,190 Q120,120 220,160 T420,140 Q520,90 600,150 T820,120 Q930,70 1020,130 T1200,150 L1200,260 Z"
+            fill="#092523" opacity="0.9"/>
+      <path d="M0,260 L0,220 Q150,180 300,210 T600,200 Q750,170 900,205 T1200,200 L1200,260 Z"
+            fill="#082523"/>
+    </svg>
+
+    <div class="hero-sea" aria-hidden="true">
+      <div class="wave wave-back">
+        <svg viewBox="0 0 2400 200" preserveAspectRatio="none">
+          <path d="M0,80 q150,-50 300,0 t300,0 t300,0 t300,0 t300,0 t300,0 t300,0 t300,0 V200 H0 Z" fill="#0b2f2d" opacity="0.9"/>
+        </svg>
+      </div>
+
+      <div class="boat">
+        <svg viewBox="0 0 120 90">
+          <path d="M10 62 H110 L96 78 H24 Z" fill="#082523" stroke="#c79a45" stroke-width="1.5"/>
+          <line x1="60" y1="10" x2="60" y2="62" stroke="#c79a45" stroke-width="2"/>
+          <path d="M64 14 L106 56 H64 Z" fill="#e6c877" opacity="0.9"/>
+          <path d="M56 22 L18 56 H56 Z" fill="#c79a45" opacity="0.75"/>
+        </svg>
+      </div>
+
+      <div class="wave wave-front">
+        <svg viewBox="0 0 2400 200" preserveAspectRatio="none">
+          <path d="M0,90 q150,-35 300,0 t300,0 t300,0 t300,0 t300,0 t300,0 t300,0 t300,0 V200 H0 Z" fill="#082523"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero-top">
+      <svg class="compass" width="72" height="72" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" stroke="#c79a45" stroke-width="1"/>
+        <circle class="ticks" cx="32" cy="32" r="26" stroke="#c79a45" stroke-width="2" stroke-dasharray="1.2 4.8" opacity="0.6"/>
+        <g class="needle">
+          <path d="M32 6 L36 30 L32 34 L28 30 Z" fill="#e6c877"/>
+          <path d="M32 58 L28 34 L32 30 L36 34 Z" fill="#0d3634" stroke="#c79a45" stroke-width="0.6"/>
+        </g>
+        <circle cx="32" cy="32" r="2.2" fill="#e6c877"/>
+      </svg>
+    </div>
+
+    <div class="hero-body">
+      <div class="eyebrow rise">Selamat datang di Serambi Mekkah</div>
+      <h1 class="hero-title">Aceh, negeri tempat <em>rempah, iman, dan keberanian</em> berlabuh.</h1>
+    </div>
+
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="track">
+        <span>Bumi Iskandar Muda</span><i>✦</i>
+        <span>Negeri Rencong</span><i>✦</i>
+        <span>Kopi Gayo</span><i>✦</i>
+        <span>Tari Saman</span><i>✦</i>
+        <span>Jalur Rempah</span><i>✦</i>
+      </div>
+    </div>
+  </header>
+
+  <div class="motif"></div>
+
+  <section id="sejarah">
+    <div class="section-head reveal">
+      <div class="eyebrow">Kronik</div>
+      <h2>Dari bandar rempah hingga daerah modal</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-year">ABAD 9–13</div>
+        <h3>Bandar-bandar awal</h3>
+        <p>
+          Kerajaan Lamuri, Peureulak, dan Samudera Pasai tumbuh sebagai bandar dagang
+          di pesisir. Peureulak dan Pasai tercatat sebagai kerajaan Islam pertama di
+          Nusantara, menjadikan Aceh pintu masuk pertama agama ini ke kepulauan.
+        </p>
+        <figure class="tl-foto">
+          <img src="download (15).jpg" alt="Foto: Bandar-bandar awal" loading="lazy" onerror="this.remove()">
+        </figure>
+      </div>
+
+      <div class="tl-item peak reveal">
+        <div class="tl-year">1496–1636</div>
+        <h3>Kesultanan Aceh Darussalam</h3>
+        <p>
+          Menyatukan bandar-bandar pesisir menjadi kesultanan besar. Di bawah Sultan
+          Iskandar Muda, Aceh menjadi kekuatan maritim dan penghasil lada terbesar di
+          dunia — disegani armada Portugis, Belanda, dan Inggris yang berebut jalur
+          rempah Selat Malaka.
+        </p>
+        <figure class="tl-foto">
+          <img src="download (16).jpg" alt="Foto: Kesultanan Aceh Darussalam" loading="lazy" onerror="this.remove()">
+        </figure>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">1873–1904</div>
+        <h3>Perang Aceh</h3>
+        <p>
+          Salah satu perang kolonial terpanjang dan termahal yang dihadapi Belanda.
+          Perlawanan rakyat berlanjut lama setelah istana jatuh, dipimpin tokoh seperti
+          Teuku Umar, Cut Nyak Dhien, dan Panglima Polim.
+        </p>
+        <figure class="tl-foto">
+          <img src="download (17).jpg" alt="Foto: Perang Aceh" loading="lazy" onerror="this.remove()">
+        </figure>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">1945–1949</div>
+        <h3>Daerah Modal</h3>
+        <p>
+          Aceh tak pernah jatuh sepenuhnya ke tangan Belanda pasca-proklamasi.
+          Rakyatnya menggalang dana membeli pesawat pertama Republik Indonesia,
+          "Seulawah RI-001", menopang perjuangan kemerdekaan.
+        </p>
+        <figure class="tl-foto">
+          <img src="images (21).jpg" alt="Foto: Daerah Modal" loading="lazy" onerror="this.remove()">
+        </figure>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">26 DES 2004</div>
+        <h3>Gempa &amp; tsunami</h3>
+        <p>
+          Gempa 9,1 magnitudo dan tsunami menghantam pesisir Aceh, bencana terbesar
+          dalam sejarah modern kawasan ini. Bencana itu juga membuka jalan bagi
+          perundingan damai yang telah lama buntu.
+        </p>
+        <figure class="tl-foto">
+          <img src="images (22).jpg" alt="Foto: Gempa &amp; tsunami" loading="lazy" onerror="this.remove()">
+        </figure>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-year">2005–SEKARANG</div>
+        <h3>Perjanjian Helsinki</h3>
+        <p>
+          Mengakhiri konflik bersenjata dan memberi Aceh status otonomi khusus,
+          termasuk penerapan sebagian syariat Islam dan kewenangan mengelola sumber
+          daya daerah secara mandiri.
+        </p>
+        <figure class="tl-foto">
+          <img src="images (23).jpg" alt="Foto: Perjanjian Helsinki" loading="lazy" onerror="this.remove()">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="motif thin"></div>
+
+  <section id="suku">
+    <div class="section-head reveal">
+      <div class="eyebrow">Keberagaman</div>
+      <h2>Satu Aceh, sembilan suku asli</h2>
+    </div>
+
+    <div class="art-strip">
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (10).jpg" alt="Suku Aceh"></div>
+        <div class="art-cell">
+          <div class="art-region">Pesisir Timur &amp; Utara</div>
+          <h3>Suku Aceh</h3>
+          <p>Suku terbesar di Aceh yang menghuni kawasan pesisir, kaya akan tradisi maritim dan sejarah kesultanan.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (11).jpg" alt="Suku Gayo"></div>
+        <div class="art-cell">
+          <div class="art-region">Dataran Tinggi Tengah</div>
+          <h3>Suku Gayo</h3>
+          <p>Mendiami dataran tinggi Gayo, terkenal dengan perkebunan kopi, budaya seni Didong, dan Tari Saman.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (12).jpg" alt="Suku Alas"></div>
+        <div class="art-cell">
+          <div class="art-region">Aceh Tenggara</div>
+          <h3>Suku Alas</h3>
+          <p>Bermukim di lembah Sungai Alas, memiliki bahasa serta adat istiadat yang khas di sekitar kawasan Leuser.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (13).jpg" alt="Suku Tamiang"></div>
+        <div class="art-cell">
+          <div class="art-region">Perbatasan Sumut</div>
+          <h3>Suku Tamiang</h3>
+          <p>Mendiami wilayah Kabupaten Aceh Tamiang dengan kebudayaan dan bahasa yang dekat dengan Melayu pesisir.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (14).jpg" alt="Suku Aneuk Jamee"></div>
+        <div class="art-cell">
+          <div class="art-region">Pesisir Barat Selatan</div>
+          <h3>Suku Aneuk Jamee</h3>
+          <p>Keturunan perantau Minangkabau yang telah berakulturasi dan menetap di pesisir barat-selatan Aceh.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="01.-Landok-Sampot-1068x801-1.png" alt="Suku Kluet"></div>
+        <div class="art-cell">
+          <div class="art-region">Aceh Selatan</div>
+          <h3>Suku Kluet</h3>
+          <p>Mendiami kawasan Kabupaten Aceh Selatan, terbagi dalam beberapa pemukiman dengan bahasa khasnya sendiri.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (15).jpg" alt="Suku Simeulue"></div>
+        <div class="art-cell">
+          <div class="art-region">Pulau Simeulue</div>
+          <h3>Suku Simeulue</h3>
+          <p>Masyarakat kepulauan di Samudra Hindia yang kaya akan kearifan lokal seperti tradisi lisan Nandong dan Smong.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (16).jpg" alt="Suku Singkil"></div>
+        <div class="art-cell">
+          <div class="art-region">Aceh Singkil</div>
+          <h3>Suku Singkil</h3>
+          <p>Mendiami wilayah pesisir selatan hingga rawa Singkil, dekat dengan wilayah perbatasan Sumatera Utara.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (17).jpg" alt="Suku Devayan &amp; Sigulai"></div>
+        <div class="art-cell">
+          <div class="art-region">Kepulauan Barat</div>
+          <h3>Devayan &amp; Sigulai</h3>
+          <p>Dua kelompok etnis asli yang mendiami bagian utara dan selatan Pulau Simeulue dengan bahasa unik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="motif thin"></div>
+
+  <section id="pakaian">
+    <div class="section-head reveal">
+      <div class="eyebrow">Busana Kebesaran</div>
+      <h2>Ulèë Balang: pakaian adat Aceh</h2>
+    </div>
+
+    <h3 class="pakaian-category-title reveal">Linto Baro (Pria)</h3>
+    <div class="art-strip">
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (18).jpg" alt="Baju Meukasah"></div>
+        <div class="art-cell">
+          <div class="art-region">Pria — Atasan</div>
+          <h3>Baju Meukasah</h3>
+          <p>Jas hitam bersulam benang emas yang melambangkan kebesaran dan kewibawaan masyarakat Aceh.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (7).jpg" alt="Celana Cekak Musang"></div>
+        <div class="art-cell">
+          <div class="art-region">Pria — Bawahan</div>
+          <h3>Celana Cekak Musang</h3>
+          <p>Celana panjang longgar bermotif senada yang nyaman dan memberikan ruang gerak bebas.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (8).jpg" alt="Kain Songket"></div>
+        <div class="art-cell">
+          <div class="art-region">Pria — Sarung</div>
+          <h3>Kain Songket</h3>
+          <p>Kain tenun emas yang disarungkan sebatas lutut di luar celana untuk menambah kesopanan.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (9).jpg" alt="Meukeutop"></div>
+        <div class="art-cell">
+          <div class="art-region">Pria — Mahkota</div>
+          <h3>Meukeutop</h3>
+          <p>Penutup kepala khas berbentuk kerucut bersusun yang melambangkan hukum Islam dan adat.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (10).jpg" alt="Rencong"></div>
+        <div class="art-cell">
+          <div class="art-region">Pria — Senjata</div>
+          <h3>Rencong</h3>
+          <p>Senjata tradisional berbentuk huruf L yang terselip di ikat pinggang sebagai simbol keberanian.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="pakaian-category-title reveal">Daro Baro (Wanita)</h3>
+    <div class="art-strip">
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (11).jpg" alt="Baju Kurung"></div>
+        <div class="art-cell">
+          <div class="art-region">Wanita — Atasan</div>
+          <h3>Baju Kurung</h3>
+          <p>Atasan longgar bersulam benang emas yang anggun dan menutup aurat dengan sempurna.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (12).jpg" alt="Celana &amp; Songket Wanita"></div>
+        <div class="art-cell">
+          <div class="art-region">Wanita — Bawahan</div>
+          <h3>Celana &amp; Kain Songket</h3>
+          <p>Celana panjang yang dipadu dengan sarung kain songket bermotif etnik di bagian luar.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (13).jpg" alt="Patam Dhoe"></div>
+        <div class="art-cell">
+          <div class="art-region">Wanita — Hiasan Kepala</div>
+          <h3>Patam Dhoe</h3>
+          <p>Mahkota kepala berhias yang khas, menandai bahwa wanita tersebut telah siap menjadi pengantin.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (14).jpg" alt="Perhiasan Adat"></div>
+        <div class="art-cell">
+          <div class="art-region">Wanita — Aksesoris</div>
+          <h3>Perhiasan Adat</h3>
+          <p>Kalung tebai, gelang emas, dan giwang bermotif flora khas ukiran songket Aceh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="motif thin"></div>
+
+  <section id="makanan">
+    <div class="section-head reveal">
+      <div class="eyebrow">Dapur Aceh</div>
+      <h2>Rasa yang mewarisi jalur rempah</h2>
+    </div>
+
+    <div class="food-strip">
+      <div class="food-card reveal">
+        <div class="food-img"><img src="download.jpg" alt="Mie Aceh"></div>
+        <div class="food-cell">
+          <div class="food-num">01</div>
+          <h3>Mie Aceh</h3>
+          <p>Mi kuning tebal dimasak kering atau berkuah dengan bumbu kari rempah, disajikan dengan daging sapi, kambing, atau seafood.</p>
+        </div>
+      </div>
+
+      <div class="food-card reveal">
+        <div class="food-img"><img src="download (1).jpg" alt="Kuah Pliek U"></div>
+        <div class="food-cell">
+          <div class="food-num">02</div>
+          <h3>Kuah Pliek U</h3>
+          <p>Sayur rebung berkuah dengan pliek u — ampas kelapa fermentasi khas Aceh yang memberi rasa gurih dan asam yang dalam.</p>
+        </div>
+      </div>
+
+      <div class="food-card reveal">
+        <div class="food-img"><img src="download (2).jpg" alt="Sate Matang"></div>
+        <div class="food-cell">
+          <div class="food-num">03</div>
+          <h3>Sate Matang</h3>
+          <p>Sate sapi atau kambing dari Matang Geulumpang Dua, disajikan dengan kuah soto hangat, bukan sambal kacang.</p>
+        </div>
+      </div>
+
+      <div class="food-card reveal">
+        <div class="food-img"><img src="download (3).jpg" alt="Kopi Aceh"></div>
+        <div class="food-cell">
+          <div class="food-num">04</div>
+          <h3>Kopi Aceh</h3>
+          <p>Kopi Gayo dari dataran tinggi dan kopi saring Ulee Kareng menopang budaya "duek kupi" — mengobrol berjam-jam di warung kopi.</p>
+        </div>
+      </div>
+
+      <div class="food-card reveal">
+        <div class="food-img"><img src="download (4).jpg" alt="Ayam Tangkap"></div>
+        <div class="food-cell">
+          <div class="food-num">05</div>
+          <h3>Ayam Tangkap</h3>
+          <p>Ayam goreng rempah yang "tersembunyi" di balik tumpukan daun temurui dan cabai hijau goreng.</p>
+        </div>
+      </div>
+
+      <div class="food-card reveal">
+        <div class="food-img"><img src="download (5).jpg" alt="Timphan"></div>
+        <div class="food-cell">
+          <div class="food-num">06</div>
+          <h3>Timphan</h3>
+          <p>Kue dari tepung ketan dan pisang atau labu, dibungkus daun pisang muda, biasa hadir saat hari raya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="motif thin"></div>
+
+  <section id="seni">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gerak &amp; Syair</div>
+      <h2>Seni pertunjukan yang berdakwah</h2>
+    </div>
+
+    <div class="art-strip">
+      <div class="art-card reveal">
+        <div class="art-img"><img src="download (6).jpg" alt="Tari Saman"></div>
+        <div class="art-cell">
+          <div class="art-region">Gayo Lues</div>
+          <h3>Tari Saman</h3>
+          <p>Ditarikan duduk berbanjar, mengandalkan tepuk tangan, dada, dan paha sebagai satu-satunya "musik". Diakui UNESCO sebagai Warisan Budaya Tak Benda.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (7).jpg" alt="Tari Seudati"></div>
+        <div class="art-cell">
+          <div class="art-region">Pesisir</div>
+          <h3>Tari Seudati</h3>
+          <p>Delapan penari pria menepuk dada dan menghentak lantai mengikuti syair Islami yang dilantunkan seorang syèh.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (8).jpg" alt="Rapai Geleng"></div>
+        <div class="art-cell">
+          <div class="art-region">Pesisir</div>
+          <h3>Rapai Geleng</h3>
+          <p>Memadukan tabuhan rebana rapai dengan gerakan tubuh serentak yang cepat dan presisi, sering ditampilkan berpasangan dengan Saman.</p>
+        </div>
+      </div>
+
+      <div class="art-card reveal">
+        <div class="art-img"><img src="images (9).jpg" alt="Didong"></div>
+        <div class="art-cell">
+          <div class="art-region">Gayo</div>
+          <h3>Didong</h3>
+          <p>Tradisi lisan Gayo yang menggabungkan sastra, musik, dan gerak — dua kelompok saling bersahut syair sebagai bentuk hiburan sekaligus kritik sosial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="motif thin"></div>
+
+  <section id="kelompok">
+    <div class="section-head tim-head reveal">
+      <div class="tim-logo-wrap">
+        <div class="tim-logo">
+          <span class="tim-logo-ph">LOGO</span>
+          <video src="Hitam dan Ungu Ilustrasi E-Sport Gaming Logo Gaming.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </div>
+      <h2>Kelompok Superboy</h2>
+    </div>
+
+    <div class="tim-grid">
+      <div class="tim-card reveal" style="--d:0ms">
+        <div class="tim-foto">
+          <span>01</span>
+          <img src="WhatsApp Image 2026-10-17 at 10.35.34.jpeg" alt="Foto Muhammad Zaki Alfatin" onerror="this.remove()">
+        </div>
+        <h3>Muhammad Zaki Alfatin</h3>
+      </div>
+
+      <div class="tim-card reveal" style="--d:90ms">
+        <div class="tim-foto">
+          <span>02</span>
+          <img src="images/anggota-2.jpg" alt="Foto Muhammad Rafi" onerror="this.remove()">
+        </div>
+        <h3>Muhammad Rafi</h3>
+      </div>
+
+      <div class="tim-card reveal" style="--d:180ms">
+        <div class="tim-foto">
+          <span>03</span>
+          <img src="images/anggota-3.jpg" alt="Foto Riski Adliansyah" onerror="this.remove()">
+        </div>
+        <h3>Riski Adliansyah</h3>
+      </div>
+
+      <div class="tim-card reveal" style="--d:270ms">
+        <div class="tim-foto">
+          <span>04</span>
+          <img src="images/anggota-4.jpg" alt="Foto Azizi Fadhullah Arif" onerror="this.remove()">
+        </div>
+        <h3>Azizi Fadhullah Arif</h3>
+      </div>
+
+      <div class="tim-card reveal" style="--d:360ms">
+        <div class="tim-foto">
+          <span>05</span>
+          <img src="images/anggota-5.jpg" alt="Foto Khilfi Hafuza Fasha" onerror="this.remove()">
+        </div>
+        <h3>Khilfi Hafuza Fasha</h3>
+      </div>
+
+      <div class="tim-card reveal" style="--d:450ms">
+        <div class="tim-foto">
+          <span>06</span>
+          <img src="images/anggota-6.jpg" alt="Foto Rasya Alfadir" onerror="this.remove()">
+        </div>
+        <h3>Rasya Alfadir</h3>
+      </div>
+    </div>
+  </section>
+
+  <div class="motif"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
